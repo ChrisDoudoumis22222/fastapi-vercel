@@ -47,13 +47,13 @@ async def get_subscription_url(email: str):
             mode="subscription",
             line_items=[
                 {
-                    "price": "price_1Pn9MbDo5uWbWPXUxxxx",  # Replace with your Stripe Price ID
+                    "price": "prod_RYZQTBIlCCyV5j",  # Replace with your Stripe Price ID
                     "quantity": 1,
                 }
             ],
             customer=customer.id,
-            success_url=f"https://your-vercel-domain.vercel.app/success?payment_id={payment_id}",
-            cancel_url=f"https://your-vercel-domain.vercel.app/cancel?payment_id={payment_id}",
+            success_url=f"https://fastapi-vercel-gamma-lemon.vercel.app//success?payment_id={payment_id}",
+            cancel_url=f"https://fastapi-vercel-gamma-lemon.vercel.app//cancel?payment_id={payment_id}",
         )
 
         return {"subscription_url": session.url}
